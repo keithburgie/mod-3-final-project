@@ -1,13 +1,13 @@
 class Api::V1::MessagesController < ApplicationController
-  before_action :find_message, only: [:update, :edit, :destroy]
+  before_action :find_message, only: [:show, :update, :edit, :destroy]
 
   def index
     @messages = Message.all
-    render json: @messages
+    render json: render_message(@messages)
   end
 
   def show
-    @message = Message.find(params[:id])
+    render json: render_message(@message)
   end 
 
   def new
@@ -23,6 +23,10 @@ class Api::V1::MessagesController < ApplicationController
       render :new
     end
     
+  end
+
+  def render_message(object)
+    object.to_json(:except => :updated_at)
   end
 
   def update

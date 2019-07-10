@@ -4,14 +4,21 @@ class Api::V1::ConversationsController < ApplicationController
 
   def index
     @conversations = Conversation.all
-    render json: @conversations, include: [:messages]
+    render json: render_conversation(@conversations)
   end
 
   def show
-    render json: @conversation
+    render json: render_conversation(@conversation)
   end
 
   private
+
+  def render_conversation(object)
+    object.to_json(:include => {
+      :messages => {:only => [:id, :user_id, :content, :created_at]}
+      #,:users => {:only => :id}
+    }, :except => [:created_at, :updated_at])
+  end
 
   def conversation_params(*args)
     params.require(:conversation).permit(*args) 
@@ -23,8 +30,6 @@ class Api::V1::ConversationsController < ApplicationController
   def find_conversation
     @conversation = Conversation.find(params[:id])
   end
-
-
 
 end
 

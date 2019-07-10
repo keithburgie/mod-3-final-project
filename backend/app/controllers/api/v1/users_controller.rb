@@ -1,10 +1,15 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :find_user, only: [:update]
+  before_action :find_user, only: [:show, :update]
 
   def index
     @users = User.all
-    render json: @users, include: [:messages]
+    render json: render_user(@users)
   end
+
+  def show
+    render json: render_user(@user)
+  end
+    
 
   def update
     @user.update(user_params)
@@ -16,6 +21,12 @@ class Api::V1::UsersController < ApplicationController
   end
 
   private
+
+  def render_user(object)
+    object.to_json(:include => {
+      :conversations => {:only => :id}
+    }, :except => [:created_at, :updated_at])
+  end
 
   def user_params(*args)
     params.require(:user).permit(*args) 

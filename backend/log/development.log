@@ -5545,3 +5545,739 @@ No serializer found for resource: #<User id: 4, email: "keith@email.com", userna
 Completed 200 OK in 51ms (Views: 37.5ms | ActiveRecord: 12.6ms)
 
 
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 13:50:58 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/work/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 7, conversation_id: 3, user_id: 6, content: "Hey Meghan how are things?", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (0.62ms)
+Completed 200 OK in 48ms (Views: 33.4ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 13:51:00 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+No serializer found for resource: #<User id: 6, email: "keith@email.com", username: "keith", created_at: "2019-07-10 15:43:48", updated_at: "2019-07-10 15:43:48">
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (21.39ms)
+Completed 200 OK in 70ms (Views: 47.4ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:57:48 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 3, name: "dc-513-mod-3", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (0.23ms)
+Completed 200 OK in 26ms (Views: 12.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:57:55 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 3, name: "dc-513-mod-3", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (0.18ms)
+Completed 500 Internal Server Error in 18ms (Views: 11.5ms | ActiveRecord: 4.6ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/conversations_controller.rb:8:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:57:59 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+No serializer found for resource: #<Conversation id: 3, name: "dc-513-mod-3", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (14.6ms)
+Completed 200 OK in 31ms (Views: 19.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:59:55 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+Completed 200 OK in 29ms (Views: 4.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:00:19 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:28
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Conversation (0.25ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:02:06 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 29ms (Views: 3.1ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:02:54 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 56ms (Views: 4.0ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:08:06 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 56ms (Views: 3.6ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:08:16 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `uniq' for :username:Symbol):
+  
+app/controllers/api/v1/conversations_controller.rb:9:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:10:44 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 48ms (Views: 3.2ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:11:43 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:11:49 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:11:56 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 0, expected 1..2)):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:15:12 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 48ms (Views: 3.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:15:24 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 52ms (Views: 3.6ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:15:35 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+Completed 200 OK in 76ms (Views: 8.1ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:17:39 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+Completed 200 OK in 41ms (Views: 4.2ms | ActiveRecord: 12.7ms)
+
+
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:17:42 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:35
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+Filter chain halted as :render_conversation rendered or redirected
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:17:54 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:35
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 13.2ms)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/api/v1/conversations_controller.rb:21:in `render_conversation'
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:18:15 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:35
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+Filter chain halted as :render_conversation rendered or redirected
+Completed 200 OK in 62ms (Views: 3.4ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:18:19 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (7.2ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:8
+Completed 200 OK in 19ms (Views: 0.4ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:18:30 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Filter chain halted as :render_conversation rendered or redirected
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:18:56 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:19:29 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `render_conversation' for #<Conversation::ActiveRecord_Relation:0x00007fc893a85918>):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:19:46 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `render_conversation' for #<Conversation::ActiveRecord_Relation:0x00007fc892ea4158>):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:19:47 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `render_conversation' for #<Conversation::ActiveRecord_Relation:0x00007fc893bd6060>):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:19:58 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `render_conversation' for #<Conversation::ActiveRecord_Relation:0x00007fc892311ed0>):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:20:04 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `render_conversation' for #<Conversation::ActiveRecord_Relation:0x00007fc895a489d0>):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:21:04 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:15
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:15
+Completed 200 OK in 55ms (Views: 3.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:21:12 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 45ms (Views: 3.8ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:21:46 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 46ms (Views: 5.4ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:21:54 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 54ms (Views: 3.4ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:23:38 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::ConversationsController::Users):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:23:49 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NoMethodError (undefined method `Users' for #<Api::V1::ConversationsController:0x00007fc893a84ae0>):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:24:12 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Api::V1::ConversationsController::Users):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:24:23 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `uniq' for :users:Symbol):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:24:32 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `uniq' for #<Api::V1::ConversationsController:0x00007fc893c455c8>):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 14:25:00 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Conversation Load (0.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/work/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+NameError (undefined local variable or method `distinct' for #<Api::V1::ConversationsController:0x00007fc8958cb940>):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:26:55 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:31
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 43ms (Views: 6.6ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:27:06 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:31
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 6.0ms)
+
+
+  
+NoMethodError (undefined method `uniq' for :id:Symbol):
+  
+app/controllers/api/v1/conversations_controller.rb:19:in `render_conversation'
+app/controllers/api/v1/conversations_controller.rb:11:in `show'
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:27:13 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:31
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "messages" ON "users"."id" = "messages"."user_id" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 47ms (Views: 4.4ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/api/v1/conversations/3" for ::1 at 2019-07-10 14:30:29 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:31
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:17
+Completed 200 OK in 25ms (Views: 3.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:30:40 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+No serializer found for resource: #<User id: 6, email: "keith@email.com", username: "keith", created_at: "2019-07-10 15:43:48", updated_at: "2019-07-10 15:43:48">
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 7]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (9.4ms)
+Completed 200 OK in 35ms (Views: 25.6ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:35:55 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 9.2ms)
+
+
+  
+NoMethodError (undefined method `conversations' for #<User:0x00007fc895b6b510>):
+  
+app/controllers/api/v1/users_controller.rb:21:in `render_user'
+app/controllers/api/v1/users_controller.rb:6:in `index'
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:36:22 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 200 OK in 28ms (Views: 13.4ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:36:34 -0400
+  
+SyntaxError (/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+... => [:created_at, :updated_at])
+...                              ^
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:37:35 -0400
+  
+SyntaxError (/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+... => [:created_at, :updated_at])
+...                              ^
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:37:36 -0400
+  
+SyntaxError (/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+... => [:created_at, :updated_at])
+...                              ^
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:37:50 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:38:05 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 200 OK in 17ms (Views: 4.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:38:12 -0400
+  
+SyntaxError (/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+... => [:created_at, :updated_at])
+...                              ^
+/Users/work/www/flatiron/final-projects/mod-3-slone/backend/app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/users_controller.rb:22: syntax error, unexpected '\n', expecting =>
+app/controllers/api/v1/users_controller.rb:23: syntax error, unexpected ')', expecting end
+app/controllers/api/v1/users_controller.rb:34: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:38:21 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 4.7ms)
+
+
+  
+NoMethodError (undefined method `conversations' for #<User:0x00007fc89309cf28>
+Did you mean?  conversation
+               conversation=):
+  
+app/controllers/api/v1/users_controller.rb:21:in `render_user'
+app/controllers/api/v1/users_controller.rb:6:in `index'
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:38:23 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `conversations' for #<User:0x00007fc893a85b48>
+Did you mean?  conversation
+               conversation=):
+  
+app/controllers/api/v1/users_controller.rb:21:in `render_user'
+app/controllers/api/v1/users_controller.rb:6:in `index'
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:39:45 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 7.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column conversations.user_id does not exist
+LINE 1: ...LECT "conversations".* FROM "conversations" WHERE "conversat...
+                                                             ^
+: SELECT "conversations".* FROM "conversations" WHERE "conversations"."user_id" = $1):
+  
+app/controllers/api/v1/users_controller.rb:21:in `render_user'
+app/controllers/api/v1/users_controller.rb:6:in `index'
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:39:54 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:21
+  [1m[36mConversation Load (2.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:21
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:21
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:21
+Completed 200 OK in 48ms (Views: 5.5ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 14:42:03 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:26
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:26
+Completed 200 OK in 76ms (Views: 3.5ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/api/v1/users/6" for ::1 at 2019-07-10 14:42:07 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:36
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:26
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 14:42:30 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 7, conversation_id: 3, user_id: 6, content: "Hey Meghan how are things?", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (0.83ms)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 14:43:25 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 7, conversation_id: 3, user_id: 6, content: "Hey Meghan how are things?", created_at: "2019-07-10 15:43:49", updated_at: "2019-07-10 15:43:49">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (0.74ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 14:43:56 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:29
+Completed 200 OK in 14ms (Views: 3.3ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/api/v1/messages/7" for ::1 at 2019-07-10 14:44:02 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2019-07-10 14:44:34 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/messages/7" for ::1 at 2019-07-10 14:44:36 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"7"}
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/messages/1" for ::1 at 2019-07-10 14:44:52 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:49
+Completed 404 Not Found in 8ms (ActiveRecord: 4.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=1):
+  
+app/controllers/api/v1/messages_controller.rb:49:in `find_message'
+Started GET "/api/v1/messages/7" for ::1 at 2019-07-10 14:44:55 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:49
+Completed 200 OK in 10ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 14:45:01 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:29
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.9ms)
+
+
