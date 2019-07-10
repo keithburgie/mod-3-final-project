@@ -12,8 +12,9 @@ Conversation.destroy_all
 
 user1 = User.create!(username: "keith", email: "keith@email.com", password: "password")
 user2 = User.create!(username: "meghan", email: "meghan@email.com", password: "password")
+user3 = User.create!(username: "natany", email: "natany@email.com", password: "password")
 
-conversation1 = Conversation.create!(name: "dc-513-mod-3", users: [user1.id, user2.id])
+conversation1 = Conversation.create!(name: "dc-513-mod-3", users: [])
 
 message1 = Message.create!(content: "Hey Meghan how are things?", user_id: user1.id, conversation_id: conversation1.id)
 message2 = Message.create!(content: "Everything is fantastic and wonderful.", user_id: user2.id, conversation_id: conversation1.id)
