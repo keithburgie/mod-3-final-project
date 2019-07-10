@@ -1,5 +1,4 @@
 class Api::V1::ConversationsController < ApplicationController
-
   before_action :find_conversation, only: [:show]
 
   def index
@@ -15,8 +14,8 @@ class Api::V1::ConversationsController < ApplicationController
 
   def render_conversation(object)
     object.to_json(:include => {
-      :messages => {:only => [:id, :user_id, :content, :created_at]}
-      #,:users => {:only => :id}
+      :messages => {:only => [:id, :user_id, :content, :created_at], :methods => :username}
+      #,:users => {:only => [:id, :username]}
     }, :except => [:created_at, :updated_at])
   end
 
@@ -32,4 +31,3 @@ class Api::V1::ConversationsController < ApplicationController
   end
 
 end
-

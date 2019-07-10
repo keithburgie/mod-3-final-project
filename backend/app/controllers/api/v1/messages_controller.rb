@@ -22,11 +22,6 @@ class Api::V1::MessagesController < ApplicationController
     else
       render :new
     end
-    
-  end
-
-  def render_message(object)
-    object.to_json(:except => :updated_at)
   end
 
   def update
@@ -38,8 +33,13 @@ class Api::V1::MessagesController < ApplicationController
     end
   end
 
-
   private
+
+  def render_message(object)
+    object.to_json(:include => {
+      :users => {:only => [:username]}
+    },:except => :updated_at)
+  end
 
   def message_params(*args)
     params.require(:message).permit(*args)
