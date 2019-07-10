@@ -1,0 +1,81 @@
+:root {
+  --spacer: 0.5em;
+  --border: 1px solid gray;
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+p {
+  margin-top: 0;
+}
+.container {
+  display: grid;
+  grid-template-columns: 3fr 8fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  height: 100vh;
+}
+.container > aside, .container .content, .container header, .container footer {
+  padding: var(--spacer);
+}
+aside {
+  background: gray;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 10fr 1fr;
+  grid-column-gap: var(--spacer);
+  grid-row-gap: 0;
+}
+main header, main footer {
+  display: flex;
+  align-items: center;
+}
+main header {
+  border-bottom: var(--border);
+}
+main header p {
+  margin: 0;
+}
+main header span {
+  display: block;
+  font-size: 80%;
+}
+main .content {
+  margin: 0;
+  list-style: none;
+}
+main .content p {
+  margin: 0 0 0.25em;
+}
+main .content .timestamp {
+  font-size: 80%;
+  font-family: sans-serif;
+  color: gray;
+}
+main .content li {
+  font-size: 90%;
+  margin-bottom: 1em;
+}
+main footer {
+  border-top: var(--border);
+}
+main footer form {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+main footer form input[type="text"] {
+  flex: 1;
+  margin-right: var(--spacer);
+  padding: var(--spacer);
+}
