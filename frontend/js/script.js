@@ -8,7 +8,7 @@ const LOGGED_IN_USER = () => {
 document.addEventListener('DOMContentLoaded', init)
 
 function init() {
-  fetchConversation(2)
+  fetchConversation(1)
   document.getElementById('message-form').addEventListener('submit', postMessage)
 }
 

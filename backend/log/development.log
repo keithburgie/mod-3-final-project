@@ -5043,3 +5043,505 @@ Migrating to RemoveUsersFromConversations (20190710164757)
   ↳ /Users/meghanmiller/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
   [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/meghanmiller/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/api/v1/conversations/2" for ::1 at 2019-07-10 12:50:25 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mConversation Load (2.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:24
+Completed 404 Not Found in 19ms (ActiveRecord: 10.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Conversation with 'id'=2):
+  
+app/controllers/api/v1/conversations_controller.rb:24:in `find_conversation'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 12:50:29 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keith@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "keith@email.com"], ["encrypted_password", "$2a$11$2uCfm4m.Oux0ExC3qTucmuoRjO6qpfc65Ihz0/axI1.gYbIGP/66."], ["username", "keith"], ["created_at", "2019-07-10 16:50:39.473889"], ["updated_at", "2019-07-10 16:50:39.473889"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meghan@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "meghan@email.com"], ["encrypted_password", "$2a$11$NbIZbSglOFL4DRkyp6Xt6uA5FcNEgd2.268hjL6E3h6aOshpC3ka6"], ["username", "meghan"], ["created_at", "2019-07-10 16:50:39.601948"], ["updated_at", "2019-07-10 16:50:39.601948"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "natany@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "natany@email.com"], ["encrypted_password", "$2a$11$/9QOBxIBRd1ilMbUudT9N.LSwfRbrIWMh9JMANJcbkLdBwR5lhQTO"], ["username", "natany"], ["created_at", "2019-07-10 16:50:39.730314"], ["updated_at", "2019-07-10 16:50:39.730314"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mConversation Create (0.7ms)[0m  [1m[32mINSERT INTO "conversations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dc-513-mod-3"], ["created_at", "2019-07-10 16:50:39.739644"], ["updated_at", "2019-07-10 16:50:39.739644"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mMessage Create (2.1ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 1], ["user_id", 1], ["content", "Hey Meghan how are things?"], ["created_at", "2019-07-10 16:50:39.765260"], ["updated_at", "2019-07-10 16:50:39.765260"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 1], ["user_id", 2], ["content", "Everything is fantastic and wonderful."], ["created_at", "2019-07-10 16:50:39.772630"], ["updated_at", "2019-07-10 16:50:39.772630"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 1], ["user_id", 1], ["content", "It was great having this pretend conversation with you."], ["created_at", "2019-07-10 16:50:39.778225"], ["updated_at", "2019-07-10 16:50:39.778225"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 12:50:48 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 1, name: "dc-513-mod-3", created_at: "2019-07-10 16:50:39", updated_at: "2019-07-10 16:50:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (2.37ms)
+Completed 200 OK in 38ms (Views: 27.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 12:51:09 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 1, conversation_id: 1, user_id: 1, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:50:39", updated_at: "2019-07-10 16:50:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (1.79ms)
+Completed 200 OK in 67ms (Views: 41.0ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 12:51:20 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+No serializer found for resource: #<User id: 1, email: "keith@email.com", username: "keith", created_at: "2019-07-10 16:50:39", updated_at: "2019-07-10 16:50:39">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 39ms (Views: 26.8ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/conversations/1" for ::1 at 2019-07-10 12:53:08 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mConversation Load (0.9ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:24
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Conversation (0.9ms)
+Completed 200 OK in 32ms (Views: 8.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/conversations/1" for ::1 at 2019-07-10 12:53:23 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mConversation Load (1.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:24
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Conversation (0.38ms)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/v1/conversations/1" for ::1 at 2019-07-10 12:53:24 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mConversation Load (2.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:24
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Conversation (0.53ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 2.1ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/rubies/ruby-2.6.1/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Destroy (0.7ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Destroy (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ db/seeds.rb:10
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[36mConversation Destroy (0.6ms)[0m  [1m[31mDELETE FROM "conversations" WHERE "conversations"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "keith@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "keith@email.com"], ["encrypted_password", "$2a$11$a4VgqlUHKxKXFejb5PYuPubM4zJ0ruPdKMX94iLiK6uckmYnfDIAO"], ["username", "keith"], ["created_at", "2019-07-10 16:56:12.863453"], ["updated_at", "2019-07-10 16:56:12.863453"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "meghan@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "meghan@email.com"], ["encrypted_password", "$2a$11$6HXfs7h59xXgPYyFzHUYheKKDdq6MI8bXYRUPgYIlnRWMIbZWzcgS"], ["username", "meghan"], ["created_at", "2019-07-10 16:56:12.990922"], ["updated_at", "2019-07-10 16:56:12.990922"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "natany@email.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "natany@email.com"], ["encrypted_password", "$2a$11$3RLxnr2n3hQ3bygnB23p4unh9JeTQL.ui9cMLjaqlxcS/nNVmCbQa"], ["username", "natany"], ["created_at", "2019-07-10 16:56:13.117033"], ["updated_at", "2019-07-10 16:56:13.117033"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mConversation Create (0.4ms)[0m  [1m[32mINSERT INTO "conversations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dc-513-mod-3"], ["created_at", "2019-07-10 16:56:13.120143"], ["updated_at", "2019-07-10 16:56:13.120143"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mConversation Create (0.3ms)[0m  [1m[32mINSERT INTO "conversations" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "dc-513-mod-5"], ["created_at", "2019-07-10 16:56:13.123339"], ["updated_at", "2019-07-10 16:56:13.123339"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mMessage Create (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 2], ["user_id", 4], ["content", "Hey Meghan how are things?"], ["created_at", "2019-07-10 16:56:13.129792"], ["updated_at", "2019-07-10 16:56:13.129792"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:21
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ db/seeds.rb:21
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 3], ["user_id", 5], ["content", "Everything is fantastic and wonderful."], ["created_at", "2019-07-10 16:56:13.135408"], ["updated_at", "2019-07-10 16:56:13.135408"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:22
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:22
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 2], ["user_id", 4], ["content", "It was great having this pretend conversation with you."], ["created_at", "2019-07-10 16:56:13.140676"], ["updated_at", "2019-07-10 16:56:13.140676"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:22
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 12:56:25 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (1.84ms)
+Completed 200 OK in 47ms (Views: 34.3ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/api/v1/messages?conversation_id=2" for ::1 at 2019-07-10 12:56:40 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  Parameters: {"conversation_id"=>"2"}
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (3.57ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/messages?conversation_id=1" for ::1 at 2019-07-10 12:56:46 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  Parameters: {"conversation_id"=>"1"}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (1.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/messages?conversation_id=%221%22" for ::1 at 2019-07-10 12:57:12 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  Parameters: {"conversation_id"=>"\"1\""}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (1.29ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/conversations/1" for ::1 at 2019-07-10 12:58:08 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:24
+Completed 404 Not Found in 16ms (ActiveRecord: 6.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Conversation with 'id'=1):
+  
+app/controllers/api/v1/conversations_controller.rb:24:in `find_conversation'
+Started GET "/api/v1/messages?conversation_id" for ::1 at 2019-07-10 12:58:27 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  Parameters: {"conversation_id"=>nil}
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (0.96ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/messages/conversation_id" for ::1 at 2019-07-10 12:58:37 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"conversation_id"}
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:10
+Completed 404 Not Found in 4ms (ActiveRecord: 0.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=conversation_id):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `show'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 12:58:47 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (1.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (1.2ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 12:58:52 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (0.68ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 12:59:05 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+No serializer found for resource: #<Message id: 4, conversation_id: 2, user_id: 4, content: "Hey Meghan how are things?", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Message::ActiveRecord_Relation (0.69ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/messages/conversation/2" for ::1 at 2019-07-10 12:59:18 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/messages/conversation/2"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/messages/conversation/" for ::1 at 2019-07-10 12:59:22 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"conversation"}
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:10
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=conversation):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `show'
+Started GET "/api/v1/messages/conversation" for ::1 at 2019-07-10 12:59:24 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"conversation"}
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:10
+Completed 404 Not Found in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=conversation):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `show'
+Started GET "/api/v1/messages/conversation_id" for ::1 at 2019-07-10 12:59:28 -0400
+Processing by Api::V1::MessagesController#show as HTML
+  Parameters: {"id"=>"conversation_id"}
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:10
+Completed 404 Not Found in 3ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=conversation_id):
+  
+app/controllers/api/v1/messages_controller.rb:10:in `show'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:01:44 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (0.89ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:02:37 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (0.46ms)
+Completed 500 Internal Server Error in 25ms (Views: 12.5ms | ActiveRecord: 6.9ms)
+
+
+  
+NoMethodError (undefined method `messages' for nil:NilClass):
+  
+app/controllers/api/v1/conversations_controller.rb:8:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:03:56 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (9.74ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 7.2ms)
+
+
+  
+NoMethodError (undefined method `message' for #<Conversation:0x00007fd7b5bd3f00>
+Did you mean?  messages
+               messages=):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:04:14 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (6.29ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 5.4ms)
+
+
+  
+NoMethodError (undefined method `message' for #<Conversation:0x00007fd7b6440670>
+Did you mean?  messages
+               messages=):
+  
+app/controllers/api/v1/conversations_controller.rb:7:in `index'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 13:04:19 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+No serializer found for resource: #<Conversation id: 2, name: "dc-513-mod-3", created_at: "2019-07-10 16:56:13", updated_at: "2019-07-10 16:56:13">
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 2]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Conversation::ActiveRecord_Relation (37.78ms)
+Completed 200 OK in 60ms (Views: 43.0ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 13:05:05 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+No serializer found for resource: #<User id: 4, email: "keith@email.com", username: "keith", created_at: "2019-07-10 16:56:12", updated_at: "2019-07-10 16:56:12">
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with User::ActiveRecord_Relation (19.21ms)
+Completed 200 OK in 51ms (Views: 37.5ms | ActiveRecord: 12.6ms)
+
+
