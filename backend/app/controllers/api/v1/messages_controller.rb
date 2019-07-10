@@ -1,9 +1,27 @@
 class Api::V1::MessagesController < ApplicationController
-  before_action :find_message, only: [:update]
+  before_action :find_message, only: [:update, :edit, :destroy]
 
   def index
     @messages = Message.all
     render json: @messages
+  end
+
+  def new
+    @message = Message.new
+  end
+
+  def create
+    @message = Message.new(message_params)
+    # if @message.valid?
+    #   @message.save
+    #   session['message_id'] = @message.id
+    #   redirect_to @message
+    # else
+    #   render :new
+    # end
+  end
+
+  def edit
   end
 
   def update
@@ -19,7 +37,7 @@ class Api::V1::MessagesController < ApplicationController
   private
 
   def message_params
-    params.permit(:content)
+    params.permit(:id, :content, :created_at, :user)
   end
 
   def find_message

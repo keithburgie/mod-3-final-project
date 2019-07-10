@@ -2752,3 +2752,1349 @@ Processing by Api::V1::ConversationsController#index as HTML
 Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 9.8ms)
 
 
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPMg5" for ::1 at 2019-07-09 21:00:30 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/work/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPN95" for ::1 at 2019-07-09 21:00:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPONT" for ::1 at 2019-07-09 21:00:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPPcn" for ::1 at 2019-07-09 21:00:42 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPRO7" for ::1 at 2019-07-09 21:00:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPT3u" for ::1 at 2019-07-09 21:00:56 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPUo8" for ::1 at 2019-07-09 21:01:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPWTU" for ::1 at 2019-07-09 21:01:10 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPYAy" for ::1 at 2019-07-09 21:01:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPZwu" for ::1 at 2019-07-09 21:01:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPbd4" for ::1 at 2019-07-09 21:01:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPdIK" for ::1 at 2019-07-09 21:01:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPe_3" for ::1 at 2019-07-09 21:01:45 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPgj1" for ::1 at 2019-07-09 21:01:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/browser-sync/socket.io/?EIO=3&transport=polling&t=MlPPiT1" for ::1 at 2019-07-09 21:02:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/browser-sync/socket.io"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations/1" for ::1 at 2019-07-09 21:05:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/conversations/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:10:18 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/work/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:20
+Completed 204 No Content in 20ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:10:32 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (1.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:20
+Completed 204 No Content in 5ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/conversation/17" for ::1 at 2019-07-09 21:12:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/conversation/17"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations" for ::1 at 2019-07-09 21:12:32 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (30.87ms)
+Completed 200 OK in 55ms (Views: 48.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/api/v1/conversation/17" for ::1 at 2019-07-09 21:12:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/conversation/17"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:13:00 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:20
+Completed 204 No Content in 2ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-09 21:13:06 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.93ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-07-09 21:13:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:13:08 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (2.6ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:20
+Completed 204 No Content in 4ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:14:16 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (22.67ms)
+Completed 200 OK in 41ms (Views: 22.3ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:18:32 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (2.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (7.97ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:20:34 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (3.43ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:22:30 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (3.12ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:23:53 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (3.12ms)
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:26:49 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (2.55ms)
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:27:14 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (2.72ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:27:36 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (3.51ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:32:35 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (20.26ms)
+Completed 200 OK in 37ms (Views: 18.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:32:44 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (35.11ms)
+Completed 200 OK in 52ms (Views: 33.3ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:33:02 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (37.64ms)
+Completed 200 OK in 55ms (Views: 31.4ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:33:40 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (6.45ms)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:38:33 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.2ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (51.53ms)
+Completed 200 OK in 66ms (Views: 39.8ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:40:21 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (7.96ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:41:27 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (28.9ms)
+Completed 200 OK in 32ms (Views: 28.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-09 21:44:34 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (15.74ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-09 21:45:02 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (2.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.83ms)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 08:38:18 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/work/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.9ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (101.82ms)
+Completed 200 OK in 194ms (Views: 129.9ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 08:38:49 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.7ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (11.01ms)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 08:39:41 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (8.47ms)
+Completed 200 OK in 11ms (Views: 7.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 08:40:29 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (60.89ms)
+Completed 200 OK in 63ms (Views: 59.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for ::1 at 2019-07-10 08:44:04 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/work/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/work/.rvm/gems/ruby-2.6.1/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 08:44:05 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/v1/users/37" for ::1 at 2019-07-10 08:44:14 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for Api::V1::UsersController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:24:07 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.8ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (10.91ms)
+Completed 200 OK in 15ms (Views: 8.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 09:24:15 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.67ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-10 09:24:30 -0400
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:24:36 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.53ms)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 09:24:44 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (9.4ms)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:25:16 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (9.1ms)
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:26:54 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (18.78ms)
+Completed 200 OK in 22ms (Views: 12.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:29:03 -0400
+Processing by Api::V1::ConversationsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (42.48ms)
+Completed 200 OK in 62ms (Views: 36.0ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/api/v1/conversations/" for ::1 at 2019-07-10 09:29:11 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.23ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/v1/conversations/" for ::1 at 2019-07-10 09:29:13 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.14ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-07-10 09:29:13 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:30:33 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (34.1ms)
+Completed 200 OK in 64ms (Views: 42.1ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:30:44 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.22ms)
+Completed 200 OK in 35ms (Views: 23.1ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:30:52 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.76ms)
+Completed 200 OK in 48ms (Views: 32.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:31:09 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (18.55ms)
+Completed 200 OK in 37ms (Views: 23.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:31:17 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (16.61ms)
+Completed 200 OK in 43ms (Views: 32.2ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:31:31 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (21.46ms)
+Completed 200 OK in 36ms (Views: 25.2ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/api/v1/messages" for ::1 at 2019-07-10 09:31:47 -0400
+Processing by Api::V1::MessagesController#index as HTML
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/messages_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.74ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-10 09:32:00 -0400
+Processing by Api::V1::ConversationsController#index as HTML
+  [1m[36mConversation Load (1.4ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:7
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (74.0ms)
+Completed 200 OK in 94ms (Views: 83.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:43:32 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (9.51ms)
+Completed 200 OK in 16ms (Views: 8.2ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/api/v1/messages" for ::1 at 2019-07-10 09:43:36 -0400
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"content"=>"Test", "created_at"=>1562766216962, "user"=>37, "message"=>{"content"=>"Test", "created_at"=>1562766216962}}
+Unpermitted parameter: :message
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70199371378020) expected, got 37 which is an instance of Integer(#70199357545560)):
+  
+app/controllers/api/v1/messages_controller.rb:14:in `create'
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:43:37 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (2.0ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (9.82ms)
+Completed 200 OK in 15ms (Views: 8.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:43:53 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (7.1ms)
+Completed 200 OK in 9ms (Views: 6.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:43:56 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (12.36ms)
+Completed 200 OK in 15ms (Views: 11.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/conversations/17" for ::1 at 2019-07-10 09:43:59 -0400
+Processing by Api::V1::ConversationsController#show as */*
+  Parameters: {"id"=>"17"}
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:21
+[active_model_serializers]   [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 17]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/api/v1/conversations_controller.rb:11
+[active_model_serializers] No serializer found for resource: "37"
+[active_model_serializers] Rendered ConversationSerializer with ActiveModelSerializers::Adapter::Attributes (9.2ms)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/v1/messages" for ::1 at 2019-07-10 09:44:03 -0400
+Processing by Api::V1::MessagesController#create as */*
+  Parameters: {"content"=>"Testing", "created_at"=>1562766243422, "user"=>37, "message"=>{"content"=>"Testing", "created_at"=>1562766243422}}
+Unpermitted parameter: :message
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (User(#70199371378020) expected, got 37 which is an instance of Integer(#70199357545560)):
+  
+app/controllers/api/v1/messages_controller.rb:14:in `create'

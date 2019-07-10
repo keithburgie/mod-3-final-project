@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do 
       resources :users, only: [:index, :show, :edit, :update]
-      resources :messages, only: [:index, :show]
-      resources :conversations, only: [:index]
+      resources :messages
+      resources :conversations, only: [:index, :show]
     end
   end
 
