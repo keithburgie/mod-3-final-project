@@ -6,22 +6,23 @@ class Api::V1::MessagesController < ApplicationController
     render json: @messages
   end
 
+  def show
+    @message = Message.find(params[:id])
+  end 
+
   def new
     @message = Message.new
   end
 
   def create
     @message = Message.new(message_params)
-    # if @message.valid?
-    #   @message.save
-    #   session['message_id'] = @message.id
-    #   redirect_to @message
-    # else
-    #   render :new
-    # end
-  end
-
-  def edit
+    if @message.valid?
+      @message.save
+      redirect_to message_path(@message)
+    else
+      render :new
+    end
+    
   end
 
   def update
@@ -36,8 +37,8 @@ class Api::V1::MessagesController < ApplicationController
 
   private
 
-  def message_params
-    params.permit(:id, :content, :created_at, :user)
+  def message_params(*args)
+    params.require(:message).permit(*args)
   end
 
   def find_message
