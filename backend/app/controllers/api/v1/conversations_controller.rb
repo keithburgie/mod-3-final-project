@@ -14,9 +14,8 @@ class Api::V1::ConversationsController < ApplicationController
   private
 
   def conversation_params(*args)
-    params.require(:conversation).permit(*args)
+    params.require(:conversation).permit(*args) 
   end
-
   # def conversation_params
   #   params.permit(:content)
   # end
