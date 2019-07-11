@@ -30,8 +30,13 @@ fetchRandomUser = () => {
 
 setUser = (user) => {
   LOGGED_IN_USER = user
-  myName().innerText = LOGGED_IN_USER.username
+  userName().innerText = LOGGED_IN_USER.username
 },
+
+// setUser = (user) => {
+//   LOGGED_IN_USER = user
+//   myName().innerText = LOGGED_IN_USER.username
+// },
 
 createUser = () => {/* TODO */},
 editUser = () => {/* TODO */}
