@@ -48,13 +48,13 @@ login = () => {
   const checkbox = loginForm().querySelector('input[type="checkbox"]')
 
   fetchUsers().then(users => findUser(users, userInput, passInput, checkbox))
-  .then(modal().classList.add('hide'))
   
   const findUser = (users, userInput, passInput, checkbox) => {
     if (users.find(user => user.username == userInput)) {
       if (passInput == "password") {
         const user = users.find(user => user.username == userInput)
         setUser(user)
+        modal().classList.add('hide')
         messageInput().focus()
         // TO DO: Cookie to save logged in user
         //checkbox.checked ? document.cookie = LOGGED_IN_USER : document.cookie = null
