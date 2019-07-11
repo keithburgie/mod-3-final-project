@@ -5,11 +5,15 @@ const API = "http://localhost:3000/api/v1/",
   CONVO_API = API + "conversations",
   MESSAGE_API = API + "messages"
 
+let USER_COOKIE
 let LOGGED_IN_USER // set by: fetchRandomUser() -> setUser(user)
 let CONVERSATION // set by: fetchRandomConversation() -> SetConversation(convo)
 
 function init() {
-  fetchRandomUser()
+  if (LOGGED_IN_USER == null){
+    showLoginForm()
+  }
+  //fetchRandomUser()
   fetchRandomConversation()
   form().addEventListener('submit', postMessage)
 }
@@ -31,6 +35,40 @@ setUser = (user) => {
 
 createUser = () => {/* TODO */},
 editUser = () => {/* TODO */}
+
+/* Login Form
+-----------------------------------------------------------*/
+const showLoginForm = () => {
+  modal().classList.remove('hide')
+},
+
+login = () => {
+  const userInput = loginForm().querySelector('input[type="text"]').value
+  const passInput = loginForm().querySelector('input[type="password"]').value
+  const checkbox = loginForm().querySelector('input[type="checkbox"]')
+
+  fetchUsers().then(users => findUser(users, userInput, passInput, checkbox))
+  .then(modal().classList.add('hide'))
+  
+  const findUser = (users, userInput, passInput, checkbox) => {
+    if (users.find(user => user.username == userInput)) {
+      if (passInput == "password") {
+        const user = users.find(user => user.username == userInput)
+        setUser(user)
+        messageInput().focus()
+        // TO DO: Cookie to save logged in user
+        //checkbox.checked ? document.cookie = LOGGED_IN_USER : document.cookie = null
+      } else {
+        alert("password is incorrect")
+        loginForm().querySelector('input[type="password"]').focus()
+      }
+    } else {
+      alert("user does not exist")
+      loginForm().reset()
+      loginForm().querySelector('input[type="text"]').focus()
+    }
+  }
+}
 
 /* Conversations
 -----------------------------------------------------------*/
@@ -72,7 +110,7 @@ postMessage = () => {
     body: JSON.stringify({
       conversation_id: CONVERSATION.id,
       user_id: LOGGED_IN_USER.id,
-      content: input().value,
+      content: messageInput().value,
       created_at: Date.now(),
       username: LOGGED_IN_USER.username
     })
@@ -80,7 +118,7 @@ postMessage = () => {
   .then(message => {
     appendMessage(message)
     form().reset()
-    input().focus()
+    messageInput().focus()
   })
 },
 
@@ -90,8 +128,10 @@ deleteMessage = (message) => {/* TODO */}
 /* Selectors
 -----------------------------------------------------------*/
 const form = () => document.getElementById('message-form')
-const input = () => form().querySelector('input')
+const messageInput = () => form().querySelector('input')
 const chatStream = () => document.getElementById('chat-stream')
 const randomize = array => Math.floor(Math.random()*array.length)
 const convoName = () => document.getElementById('conversation-name')
 const myName = () => document.getElementById('my-name')
+const modal = () => document.querySelector('.modal')
+const loginForm = () => document.getElementById('login-form')

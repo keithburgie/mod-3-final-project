@@ -83,3 +83,11 @@ main footer form input[type="text"] {
   margin-right: var(--spacer);
   padding: var(--spacer);
 }
+
+.modal {
+  transition: all .5s;
+  margin-top: 0;
+}
+.modal.hide {
+  margin-top: -19px;
+}

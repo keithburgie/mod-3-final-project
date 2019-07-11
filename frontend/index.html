@@ -8,6 +8,18 @@
   <title>Slone - A Pretty Terrible Slack Clone</title>
 </head>
 <body>
+  <div class="modal hide">
+    <form id="login-form" onsubmit="login(); return false;">
+        <label for="username"><b>Username</b></label>
+        <input type="text" id="username" placeholder="Enter Username" name="username" required>
+        <label for="password"><b>Password</b></label>
+        <input type="password" id="password"  placeholder="Enter Password" name="password" required>
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+    </form>
+  </div>
   <div class="container">
     <aside>
       <p><strong>App Name</strong></p>
