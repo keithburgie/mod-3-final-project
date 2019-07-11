@@ -26,8 +26,13 @@ fetchRandomUser = () => {
 
 setUser = (user) => {
   LOGGED_IN_USER = user
-  myName().innerText = LOGGED_IN_USER.username
+  userName().innerText = LOGGED_IN_USER.username
 },
+
+// setUser = (user) => {
+//   LOGGED_IN_USER = user
+//   myName().innerText = LOGGED_IN_USER.username
+// },
 
 createUser = () => {/* TODO */},
 editUser = () => {/* TODO */}
@@ -94,4 +99,5 @@ const input = () => form().querySelector('input')
 const chatStream = () => document.getElementById('chat-stream')
 const randomize = array => Math.floor(Math.random()*array.length)
 const convoName = () => document.getElementById('conversation-name')
-const myName = () => document.getElementById('my-name')
+// const myName = () => document.getElementById('my-name')
+const userName = array => document.getElementById('username')
