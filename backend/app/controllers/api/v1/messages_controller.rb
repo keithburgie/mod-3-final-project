@@ -15,13 +15,8 @@ class Api::V1::MessagesController < ApplicationController
   end
 
   def create
-    @message = Message.new(message_params)
-    if @message.valid?
-      @message.save
-      redirect_to message_path(@message)
-    else
-      render :new
-    end
+    new_message = Message.create(message_params)
+    render json: render_message(new_message)
   end
 
   def update
@@ -36,14 +31,16 @@ class Api::V1::MessagesController < ApplicationController
   private
 
   def render_message(object)
-    object.to_json(:include => {
-      :users => {:only => [:username]}
-    },:except => :updated_at)
+    object.to_json(:only => [:id, :user_id, :content, :created_at, :conversation_id], :methods => :username)
   end
 
-  def message_params(*args)
-    params.require(:message).permit(*args)
+  def message_params
+    params.require(:message).permit(:conversation_id, :user_id, :content, :created_at)
   end
+
+  # def message_params(*args)
+  #   params.require(:message).permit(*args)
+  # end
 
   def find_message
     @message = Message.find(params[:id])
