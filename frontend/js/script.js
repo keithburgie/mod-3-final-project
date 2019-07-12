@@ -5,27 +5,31 @@ const API = "http://localhost:3000/api/v1/",
   CONVO_API = API + "conversations",
   MESSAGE_API = API + "messages"
 
-let USER_COOKIE
-let LOGGED_IN_USER // set by: fetchRandomUser() -> setUser(user)
+let LOGGED_IN_USER
 let CONVERSATION // set by: fetchRandomConversation() -> SetConversation(convo)
 
 function init() {
-  if (LOGGED_IN_USER == null){
-    showLoginForm()
-  }
-  //fetchRandomUser()
+  checkSession()
   fetchRandomConversation()
   form().addEventListener('submit', postMessage)
 }
 
+/* Sessions
+-----------------------------------------------------------*/
+const checkSession = () => {
+  const id = sessionStorage.getItem("user_session")
+  id == null ? showLoginForm() : fetchUser(id)
+}
+
+
 /* Users
 -----------------------------------------------------------*/
-const fetchUsers = () => {
-  return fetch(USERS_API).then(r => r.json())
+fetchUser = (id) => {
+  return fetch(`${USERS_API}/${id}`).then(r => r.json()).then(user => setUser(user))
 },
 
-fetchRandomUser = () => {
-  fetchUsers().then(users => setUser(users[randomize(users)]))
+fetchUsers = () => {
+  return fetch(USERS_API).then(r => r.json())
 },
 
 setUser = (user) => {
@@ -53,11 +57,10 @@ login = () => {
     if (users.find(user => user.username == userInput)) {
       if (passInput == "password") {
         const user = users.find(user => user.username == userInput)
-        setUser(user)
+        sessionStorage.setItem("user_session", user.id)
+        checkSession()
         modal().classList.add('hide')
         messageInput().focus()
-        // TO DO: Cookie to save logged in user
-        //checkbox.checked ? document.cookie = LOGGED_IN_USER : document.cookie = null
       } else {
         alert("password is incorrect")
         loginForm().querySelector('input[type="password"]').focus()
@@ -76,15 +79,41 @@ const fetchConversations = () => {
   return fetch(CONVO_API).then(r => r.json())
 },
 
-fetchRandomConversation = () => {
-  fetchConversations().then(convos => setConversation(convos[randomize(convos)]))
+fetchConversation = (id) => {
+  return fetch(`${CONVO_API}/${id}`).then(r => r.json())
+  .then(convo => {
+    if (CONVERSATION.id !== convo.id) {
+      setConversation(convo, listen)
+    } else {
+      const messages = convo.messages.length
+      console.log(messages)
+    }
+  })
 },
 
-setConversation = (convo) => {
+fetchRandomConversation = () => {
+  fetchConversations().then(convos => {
+    setConversation(convos[randomize(convos)], listen)
+  })
+},
+
+setConversation = (convo, callback) => {
   CONVERSATION = convo
   convoName().innerText = CONVERSATION.name
-  convo.messages.forEach(message => appendMessage(message))
+  convo.messages.forEach(message => {
+    appendMessage(message)
+  })
+  callback(convo)
 },
+
+listen = (convo) => {
+  const id = convo.id
+  const name = convo.name
+  let messages = convo.messages
+  let count = messages.length
+  console.log(`listening to ${convo}`)
+  setInterval(() => fetchConversation(id), 2000)
+}
 
 createConversation = () => {/* TODO */}
 
