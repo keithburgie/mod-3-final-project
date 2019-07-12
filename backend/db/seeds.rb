@@ -17,8 +17,8 @@ user3 = User.create!(username: "natany", email: "natany@email.com", password: "p
 conversation1 = Conversation.create!(name: "dc-513-mod-3")
 conversation2 = Conversation.create!(name: "dc-513-mod-5")
 
-# message1 = Message.create!(content: "Hey Meghan how are things?", user_id: user1.id, conversation_id: conversation1.id)
-# message2 = Message.create!(content: "Everything is fantastic and wonderful.", user_id: user2.id, conversation_id: conversation2.id)
-# message3 = Message.create!(content: "It was great having this pretend conversation with you.", user_id: user1.id, conversation_id: conversation1.id)
-# message3 = Message.create!(content: "Today!.", user_id: user3.id, conversation_id: conversation2.id)
+message1 = Message.create!(content: "Hey Meghan how are things?", user_id: user1.id, conversation_id: conversation1.id)
+message2 = Message.create!(content: "Everything is fantastic and wonderful.", user_id: user2.id, conversation_id: conversation2.id)
+message3 = Message.create!(content: "It was great having this pretend conversation with you.", user_id: user1.id, conversation_id: conversation1.id)
+message3 = Message.create!(content: "Today!.", user_id: user3.id, conversation_id: conversation2.id)
 
