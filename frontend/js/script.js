@@ -182,11 +182,6 @@ postMessage = () => {
   })
 },
 
-<<<<<<< HEAD
-
-// editMessage = (message) => {/* TODO */},
-// deleteMessage = (message) => {/* TODO */}
-=======
 editMessage = () => {
   const message = event.target.parentElement
   const messageId = message.id
@@ -206,7 +201,6 @@ deleteMessage = () => {
   // Now do delete fetch with messageId
 
 }
->>>>>>> master
 
 /* Selectors
 -----------------------------------------------------------*/
