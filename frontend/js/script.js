@@ -82,22 +82,22 @@ logout = () => {
 
 /* Sockets (not doing anything)
 -----------------------------------------------------------*/
-function openConnection() {
-  // return new WebSocket("ws://localhost:3000/cable")
-  return new WebSocket("wss://localhost:3000/cable")
-}
+// function openConnection() {
+//   // return new WebSocket("ws://localhost:3000/cable")
+//   return new WebSocket("wss://localhost:3000/cable")
+// }
 
-const socket = new WebSocket('wss://localhost:8080');
+// const socket = new WebSocket('wss://localhost:8080');
 
-// Connection opened
-socket.addEventListener('open', function (event) {
-    socket.send('Hello Server!');
-});
+// // Connection opened
+// socket.addEventListener('open', function (event) {
+//     socket.send('Hello Server!');
+// });
 
-// Listen for messages
-socket.addEventListener('message', function (event) {
-    console.log('Message from server ', event.data);
-});
+// // Listen for messages
+// socket.addEventListener('message', function (event) {
+//     console.log('Message from server ', event.data);
+// });
 
 
 /* Conversations
@@ -147,11 +147,15 @@ createConversation = () => {/* TODO */}
 /* Messages
 -----------------------------------------------------------*/
 const appendMessage = (message) => {
-  const {username, content, created_at:timestamp} = message
+  const {id, user_id, username, content, created_at:timestamp} = message
   const li = document.createElement('li')
+  li.id = id
   li.innerHTML = `
   <p><strong>${username}</strong> <span class="timestamp">${moment(timestamp).calendar()}</span></p>
   <p>${content}</p>`
+  if (user_id == sessionStorage["user_session"]) {
+    li.insertAdjacentHTML('beforeend',`<button onclick="editMessage()">edit</button> <button onclick="deleteMessage()">delete</button>`)
+  }
   chatStream().appendChild(li)
 },
 
