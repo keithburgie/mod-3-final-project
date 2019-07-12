@@ -73,6 +73,27 @@ login = () => {
   }
 }
 
+
+/* Sockets (not doing anything)
+-----------------------------------------------------------*/
+function openConnection() {
+  // return new WebSocket("ws://localhost:3000/cable")
+  return new WebSocket("wss://localhost:3000/cable")
+}
+
+const socket = new WebSocket('wss://localhost:8080');
+
+// Connection opened
+socket.addEventListener('open', function (event) {
+    socket.send('Hello Server!');
+});
+
+// Listen for messages
+socket.addEventListener('message', function (event) {
+    console.log('Message from server ', event.data);
+});
+
+
 /* Conversations
 -----------------------------------------------------------*/
 const fetchConversations = () => {
@@ -112,7 +133,7 @@ listen = (convo) => {
   let messages = convo.messages
   let count = messages.length
   console.log(`listening to ${convo}`)
-  setInterval(() => fetchConversation(id), 2000)
+  //setInterval(() => fetchConversation(id), 2000)
 }
 
 createConversation = () => {/* TODO */}
