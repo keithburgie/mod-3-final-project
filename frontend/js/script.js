@@ -34,9 +34,9 @@ fetchUsers = () => {
 
 setUser = (user) => {
   LOGGED_IN_USER = user
-  myName().innerText = LOGGED_IN_USER.username
+  myName().innerHTML = `${LOGGED_IN_USER.username} 
+  <button data-id="${LOGGED_IN_USER.id}" onclick="logout()">Logout</button>`
 },
-
 createUser = () => {/* TODO */},
 editUser = () => {/* TODO */}
 
@@ -71,6 +71,12 @@ login = () => {
       loginForm().querySelector('input[type="text"]').focus()
     }
   }
+},
+
+logout = () => {
+  const user = event.target.dataset.id
+  sessionStorage.removeItem("user_session")
+  checkSession()
 }
 
 
