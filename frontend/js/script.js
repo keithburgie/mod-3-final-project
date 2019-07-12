@@ -11,6 +11,7 @@ let CONVERSATION // set by: fetchRandomConversation() -> SetConversation(convo)
 
 function init() {
   checkSession()
+  listUsers()
   fetchRandomConversation()
   form().addEventListener('submit', postMessage)
 }
@@ -38,6 +39,23 @@ setUser = (user) => {
   myName().innerHTML = `${LOGGED_IN_USER.username} 
   <button data-id="${LOGGED_IN_USER.id}" onclick="logout()">Logout</button>`
 },
+
+listUsers = () => {
+  fetchUsers().then(users => {
+    users.forEach(user => {
+      if (user.id != sessionStorage["user_session"]) {
+        const li = document.createElement('li')
+        const span = document.createElement('span')
+        li.appendChild(span)
+        span.innerText = user.username
+        span.dataset.id = user.id
+        span.addEventListener('click', createConversation)
+        usersList().appendChild(li)
+      }
+    })
+  })
+}
+
 createUser = () => {/* TODO */},
 editUser = () => {/* TODO */}
 
@@ -80,27 +98,6 @@ logout = () => {
   checkSession()
 }
 
-
-/* Sockets (not doing anything)
------------------------------------------------------------*/
-// function openConnection() {
-//   // return new WebSocket("ws://localhost:3000/cable")
-//   return new WebSocket("wss://localhost:3000/cable")
-// }
-
-// const socket = new WebSocket('wss://localhost:8080');
-
-// // Connection opened
-// socket.addEventListener('open', function (event) {
-//     socket.send('Hello Server!');
-// });
-
-// // Listen for messages
-// socket.addEventListener('message', function (event) {
-//     console.log('Message from server ', event.data);
-// });
-
-
 /* Conversations
 -----------------------------------------------------------*/
 const fetchConversations = () => {
@@ -121,7 +118,7 @@ fetchConversation = (id) => {
 
 fetchRandomConversation = () => {
   fetchConversations().then(convos => {
-    setConversation(convos[randomize(convos)], listen)
+    setConversation(convos[randomize(convos)])
   })
 },
 
@@ -134,16 +131,13 @@ setConversation = (convo, callback) => {
   callback(convo)
 },
 
-listen = (convo) => {
-  const id = convo.id
-  const name = convo.name
-  let messages = convo.messages
-  let count = messages.length
-  console.log(`listening to ${convo}`)
-  //setInterval(() => fetchConversation(id), 2000)
+createConversation = () => {
+  const clickedId = event.target.dataset.id
+  const clickedName = event.target.innerText
+  const conversation = `${clickedName} & ${LOGGED_IN_USER.username}`
+  alert(`Loading conversation between ${conversation}...`)
+  alert(`Sorry, we ran out of time to program this.`)
 }
-
-createConversation = () => {/* TODO */}
 
 /* Messages
 -----------------------------------------------------------*/
@@ -183,31 +177,18 @@ postMessage = () => {
   })
 },
 
-// editMessage = () => {
- 
-//   const message = event.target.parentElement
-//   const messageId = message.id
-//   const messageContainer = message.querySelectorAll("p")[1]
-//   let content = messageContainer.innerText
-//   let editMessage = prompt("Edit Message", content)
-//   if (editMessage != null) {
-//     messageContainer.innerText = editMessage
-//   }
-
-//   fetch(MESSAGE_API+"/"+messageId, { method: "PATCH",
-//   credentials: 'same-origin',
-//     headers: {
-//       "Content-Type": "application/json",
-//       "Accept": "application/json"
-//     },
-//     body: JSON.stringify({
-//       content: editMessage,
-//       created_at: Date.now()
-//     })
-//   })
-//   // Now do post fetch with messageId
+editMessage = () => {
+  const message = event.target.parentElement
+  const messageId = message.id
+  const messageContainer = message.querySelectorAll("p")[1]
+  let content = messageContainer.innerText
+  let editMessage = prompt("Edit Message", content)
+  if (editMessage != null) {
+    messageContainer.innerText = editMessage
+  }
+  // Now do post fetch with messageId
   
-// },
+},
 deleteMessage = () => {
   
   const message = event.target.parentElement
@@ -229,3 +210,4 @@ const convoName = () => document.getElementById('conversation-name')
 const myName = () => document.getElementById('my-name')
 const modal = () => document.querySelector('.modal')
 const loginForm = () => document.getElementById('login-form')
+const usersList = () => document.getElementById('users-list')
