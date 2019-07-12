@@ -24167,3 +24167,189 @@ Completed 200 OK in 15ms (Views: 1.4ms | ActiveRecord: 7.1ms)
 Completed 200 OK in 53ms (Views: 0.3ms | ActiveRecord: 15.4ms)
 
 
+Started GET "/api/v1/conversations" for ::1 at 2019-07-12 10:20:40 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#index as */*
+  [1m[36mConversation Load (1.1ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 4]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+Completed 200 OK in 207ms (Views: 17.7ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-12 10:21:11 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#index as */*
+  [1m[36mConversation Load (1.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 4]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+Completed 200 OK in 184ms (Views: 14.8ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-12 10:21:41 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/meghanmiller/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ConversationsController#index as */*
+  [1m[36mConversation Load (1.0ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 4]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+Completed 200 OK in 191ms (Views: 30.3ms | ActiveRecord: 27.4ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-12 10:21:52 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.7ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/users/5" for ::1 at 2019-07-12 10:21:52 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:35
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/messages" for ::1 at 2019-07-12 10:21:55 -0400
+Processing by Api::V1::MessagesController#create as JSON
+  Parameters: {"conversation_id"=>4, "user_id"=>5, "content"=>"fasdf", "created_at"=>1562941315813, "username"=>"meghan", "message"=>{"conversation_id"=>4, "user_id"=>5, "content"=>"fasdf", "created_at"=>1562941315813}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mConversation Load (0.4ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mMessage Create (2.1ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 4], ["user_id", 5], ["content", "fasdf"], ["created_at", "2019-07-12 14:21:55.831237"], ["updated_at", "2019-07-12 14:21:55.831237"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+Completed 200 OK in 14ms (Views: 0.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/api/v1/conversations" for ::1 at 2019-07-12 10:22:22 -0400
+Processing by Api::V1::ConversationsController#index as */*
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations"[0m
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 3]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."conversation_id" = $1[0m  [["conversation_id", 4]]
+  ↳ app/controllers/api/v1/conversations_controller.rb:16
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/models/message.rb:8
+Completed 200 OK in 28ms (Views: 0.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/api/v1/users" for ::1 at 2019-07-12 10:22:27 -0400
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.9ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.7ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+  [1m[36mConversation Load (0.5ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/api/v1/users/5" for ::1 at 2019-07-12 10:22:27 -0400
+Processing by Api::V1::UsersController#show as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:35
+  [1m[36mConversation Load (0.6ms)[0m  [1m[34mSELECT "conversations".* FROM "conversations" INNER JOIN "messages" ON "conversations"."id" = "messages"."conversation_id" WHERE "messages"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:25
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/v1/messages" for ::1 at 2019-07-12 10:22:30 -0400
+Processing by Api::V1::MessagesController#create as JSON
+  Parameters: {"conversation_id"=>3, "user_id"=>5, "content"=>"asdffd", "created_at"=>1562941350238, "username"=>"meghan", "message"=>{"conversation_id"=>3, "user_id"=>5, "content"=>"asdffd", "created_at"=>1562941350238}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mConversation Load (0.3ms)[0m  [1m[34mSELECT  "conversations".* FROM "conversations" WHERE "conversations"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[36mMessage Create (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("conversation_id", "user_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["conversation_id", 3], ["user_id", 5], ["content", "asdffd"], ["created_at", "2019-07-12 14:22:30.249599"], ["updated_at", "2019-07-12 14:22:30.249599"]]
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/messages_controller.rb:18
+Completed 200 OK in 11ms (Views: 0.7ms | ActiveRecord: 2.5ms)
+
+

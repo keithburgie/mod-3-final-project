@@ -182,9 +182,31 @@ postMessage = () => {
   })
 },
 
+<<<<<<< HEAD
 
 // editMessage = (message) => {/* TODO */},
 // deleteMessage = (message) => {/* TODO */}
+=======
+editMessage = () => {
+  const message = event.target.parentElement
+  const messageId = message.id
+  const messageContainer = message.querySelectorAll("p")[1]
+  let content = messageContainer.innerText
+  let editMessage = prompt("Edit Message", content)
+  if (editMessage != null) {
+    messageContainer.innerText = editMessage
+  }
+  // Now do post fetch with messageId
+
+},
+deleteMessage = () => {
+  const message = event.target.parentElement
+  const messageId = message.id
+  message.remove()
+  // Now do delete fetch with messageId
+
+}
+>>>>>>> master
 
 /* Selectors
 -----------------------------------------------------------*/
