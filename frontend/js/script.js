@@ -182,8 +182,9 @@ postMessage = () => {
   })
 },
 
-editMessage = (message) => {/* TODO */},
-deleteMessage = (message) => {/* TODO */}
+
+// editMessage = (message) => {/* TODO */},
+// deleteMessage = (message) => {/* TODO */}
 
 /* Selectors
 -----------------------------------------------------------*/
