@@ -4,6 +4,7 @@ const API = "http://localhost:3000/api/v1/",
   USERS_API = API + "users",
   CONVO_API = API + "conversations",
   MESSAGE_API = API + "messages"
+  EDIT_MESSAGE_API = API + "messages" +"message.id"
 
 let LOGGED_IN_USER
 let CONVERSATION // set by: fetchRandomConversation() -> SetConversation(convo)
@@ -182,24 +183,40 @@ postMessage = () => {
   })
 },
 
-editMessage = () => {
-  const message = event.target.parentElement
-  const messageId = message.id
-  const messageContainer = message.querySelectorAll("p")[1]
-  let content = messageContainer.innerText
-  let editMessage = prompt("Edit Message", content)
-  if (editMessage != null) {
-    messageContainer.innerText = editMessage
-  }
-  // Now do post fetch with messageId
+// editMessage = () => {
+ 
+//   const message = event.target.parentElement
+//   const messageId = message.id
+//   const messageContainer = message.querySelectorAll("p")[1]
+//   let content = messageContainer.innerText
+//   let editMessage = prompt("Edit Message", content)
+//   if (editMessage != null) {
+//     messageContainer.innerText = editMessage
+//   }
 
-},
+//   fetch(MESSAGE_API+"/"+messageId, { method: "PATCH",
+//   credentials: 'same-origin',
+//     headers: {
+//       "Content-Type": "application/json",
+//       "Accept": "application/json"
+//     },
+//     body: JSON.stringify({
+//       content: editMessage,
+//       created_at: Date.now()
+//     })
+//   })
+//   // Now do post fetch with messageId
+  
+// },
 deleteMessage = () => {
+  
   const message = event.target.parentElement
   const messageId = message.id
-  message.remove()
   // Now do delete fetch with messageId
 
+  fetch(MESSAGE_API+"/"+messageId, { method: "DELETE"})
+  .then(r => r.json).then(message.remove())
+   
 }
 
 /* Selectors

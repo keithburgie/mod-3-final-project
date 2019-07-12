@@ -28,6 +28,9 @@ class Api::V1::MessagesController < ApplicationController
     end
   end
 
+  def destroy
+  end 
+
   private
 
   def render_message(object)
