@@ -108,7 +108,7 @@ fetchConversation = (id) => {
   return fetch(`${CONVO_API}/${id}`).then(r => r.json())
   .then(convo => {
     if (CONVERSATION.id !== convo.id) {
-      setConversation(convo, listen)
+      setConversation(convo)
     } else {
       const messages = convo.messages.length
       console.log(messages)
@@ -122,13 +122,12 @@ fetchRandomConversation = () => {
   })
 },
 
-setConversation = (convo, callback) => {
+setConversation = (convo) => {
   CONVERSATION = convo
   convoName().innerText = CONVERSATION.name
   convo.messages.forEach(message => {
     appendMessage(message)
   })
-  callback(convo)
 },
 
 createConversation = () => {
@@ -186,17 +185,30 @@ editMessage = () => {
   if (editMessage != null) {
     messageContainer.innerText = editMessage
   }
-  // Now do post fetch with messageId
   
+  fetch(MESSAGE_API+"/"+messageId, { 
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      content: editMessage,
+      created_at: Date.now()
+    })
+  })
+  .then(r => r.json)
+  .catch(error => alert('Fetch error: We have CORS problems.', error))
 },
 deleteMessage = () => {
   
   const message = event.target.parentElement
   const messageId = message.id
-  // Now do delete fetch with messageId
+  message.remove()
 
   fetch(MESSAGE_API+"/"+messageId, { method: "DELETE"})
-  .then(r => r.json).then(message.remove())
+  .then(r => r.json)
+  .catch(error => alert('Fetch error: We have CORS problems.', error))
    
 }
 
