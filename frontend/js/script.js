@@ -142,6 +142,8 @@ createConversation = () => {
 -----------------------------------------------------------*/
 const appendMessage = (message) => {
   const {id, user_id, username, content, created_at:timestamp} = message
+  var colors = ['red', 'violet', 'blue', 'peru'];
+  var random_color = colors[Math.floor(Math.random() * colors.length)];
   const li = document.createElement('li')
   li.id = id
   li.innerHTML = `
@@ -150,6 +152,7 @@ const appendMessage = (message) => {
   if (user_id == sessionStorage["user_session"]) {
     li.insertAdjacentHTML('beforeend',`<button onclick="editMessage()">edit</button> <button onclick="deleteMessage()">delete</button>`)
   }
+  li.children[0].style.color = random_color
   chatStream().appendChild(li)
 },
 

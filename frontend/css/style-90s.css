@@ -1,0 +1,123 @@
+:root {
+  --spacer: 2em;
+  --containerHeight: 600px;
+}
+body {
+  background: url(../img/background.jpg) repeat;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+.modal {
+  transition: all .5s;
+  margin-top: 0;
+  display: block;
+  padding: 1em;
+  box-shadow: 0px 0.125em 0px black;
+}
+.modal.hide {
+  margin-top: -4em;
+}
+.modal, .container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.container {
+  margin: 3em auto 0;
+  height: var(--containerHeight);
+  border: 3px dotted black;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between */
+}
+.row {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  border: 2px solid black;
+  position: relative;
+}
+.header, .footer {
+  position: absolute;
+  height: var(--spacer);
+}
+.row.header {
+  top: 0;
+  align-items: center;
+  padding: 0 .5em;
+}
+.row.middle {
+  z-index: 0;
+  height: calc(var(--containerHeight) - var(--spacer));
+  padding: var(--spacer) 0;
+  margin-top: var(--spacer);
+  flex-direction: column-reverse;
+  overflow: scroll;
+}
+.row.middle > div {
+  border-right: 5px solid black;
+  border-style: double;
+}
+.row.footer {
+  bottom: 0;
+}
+#login-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#message-form {
+  width: 100%;
+  display: flex;
+}
+#message-form input[type="text"] {
+  flex: 1;
+}
+
+.chat-box,
+.chatters-box {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.chat-box {
+  padding-top: 2em;
+  width: 70%;
+}
+.chat-box ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.chat-box li {
+  margin-bottom: 1em;
+}
+.chat-box li p {
+  margin: 0 0 .5em;
+}
+
+.chatters-box {
+  padding: 0 1em var(--spacer); 
+  width: 30%;
+  position: absolute;
+  top: var(--spacer);
+  right: 0;
+}
+.chatters-box ul {
+  list-style-type: square;
+  padding-left: 1.5em;
+}
+
+button:hover {
+  cursor: pointer;
+}

@@ -4,28 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
+  <link rel="stylesheet" href="css/style-90s.css">
   <title>Document</title>
 </head>
 <body>
-  
-  <div class="container">
-    <div class="header">
-
-    </div>
-    <div class="row">
-      <div class="chat-box">
-
+  <div class="modal hide">
+    <form id="login-form" onsubmit="login(); return false;">
+      <div class="form-group">
+          <label for="username"><b>Username</b></label> 
+          <input type="text" id="username" placeholder="Enter Username" name="username" required>    
       </div>
-      <div class="users-box">
-
+      <div class="form-group">
+          <label for="password"><b>Password</b></label> 
+          <input type="password" id="password"  placeholder="Enter Password" name="password" required>    
       </div>
-      <div class="row">
-        <div class="send-message-box">
-          
-        </div>
-      </div>
-    </div>
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </form>
   </div>
   
+  <div class="container">
+    <div class="row header">
+      <div class="logo">SLOAN</div>
+      <strong id="conversation-name"><!-- Conversation Name --></strong> 
+      <span id="my-name"><!-- Username --></span>
+    </div>
+    <div class="row middle">
+      <div class="chat-box">
+        <ul id="chat-stream" class="content">
+           <!-- Chat Message Here-->
+          </ul>
+      </div>
+    </div>
+    <div class="chatters-box">
+        <h3>Chatters</h3>
+        <ul id="users-list">
+          <!-- Users Here -->
+        </ul>
+      </div>
+    <div class="row footer">
+      <form id="message-form">
+        <input type="text" placeholder="Enter your message here">
+        <input type="submit" value="Send">
+      </form>
+    </div>
+  </div>
+
+  <script src="js/moment.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
